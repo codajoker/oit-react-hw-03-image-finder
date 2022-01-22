@@ -1,5 +1,6 @@
 import styles from "./Modal.module.css";
 import { AiFillCloseCircle } from "react-icons/ai";
+import PropTypes from "prop-types";
 
 import React, { Component } from "react";
 import { createPortal } from "react-dom";
@@ -46,3 +47,7 @@ export class Modal extends Component {
     );
   }
 }
+Modal.propTypes = {
+  largeImage: PropTypes.string,
+  toogleModal: PropTypes.func.isRequired,
+};
